@@ -14,7 +14,6 @@ class _AddQuestionScreenState extends State {
   final TextEditingController option2Controller = TextEditingController();
   final TextEditingController option3Controller = TextEditingController();
   final TextEditingController option4Controller = TextEditingController();
-  final TextEditingController option5Controller = TextEditingController();
   int correctAnswerIndex = 0; // Index of the correct answer
 
   @override
@@ -49,10 +48,6 @@ class _AddQuestionScreenState extends State {
               controller: option4Controller,
               decoration: InputDecoration(labelText: 'Option 4'),
             ),
-            TextFormField(
-              controller: option4Controller,
-              decoration: InputDecoration(labelText: 'Option 5'),
-            ),
             SizedBox(height: 16.0),
             DropdownButtonFormField<int>(
               value: correctAnswerIndex,
@@ -73,10 +68,6 @@ class _AddQuestionScreenState extends State {
                   value: 3,
                   child: Text('Option 4'),
                 ),
-                DropdownMenuItem(
-                  value: 4,
-                  child: Text('Option 5'),
-                ),
               ],
               onChanged: (value) {
                 setState(() {
@@ -96,7 +87,6 @@ class _AddQuestionScreenState extends State {
                     option2Controller.text,
                     option3Controller.text,
                     option4Controller.text,
-                    option5Controller.text,
                   ],
                   correctAnswerIndex: correctAnswerIndex,
                 );
@@ -109,7 +99,6 @@ class _AddQuestionScreenState extends State {
                 option2Controller.clear();
                 option3Controller.clear();
                 option4Controller.clear();
-                option5Controller.clear();
 
                 // Reset the correct answer index
                 setState(() {

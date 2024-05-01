@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import '/widgets/add_question_screen.dart';
+import 'package:share/share.dart';
 import '/screens/quiz_screen.dart';
-import 'package:quiz_app_tutorial/widgets/next_button.dart';
+import '/widgets/add_question_screen.dart';
+import 'package:quiz_app_tutorial/widgets/next_button.dart'; // Import the RectangularButton widget
 
 void main() {
   runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       theme: ThemeData.dark().copyWith(),
-      home: const QuizScreen(),
+      home: HomeScreen(),
     );
   }
 }

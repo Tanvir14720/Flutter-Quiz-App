@@ -40,15 +40,4 @@ const List<Question> questions = [
       'd) Shakib Al Hasan'
     ],
   ),
-  Question(
-    question:
-        '5. Which stadium in Dhaka is known as the "Home of Cricket" in Bangladesh?',
-    correctAnswerIndex: 2,
-    options: [
-      'a) Sher-e-Bangla National Cricket Stadium',
-      'b) Sylhet International Cricket Stadium',
-      'c) Mirpur Stadium',
-      'd) Zahur Ahmed Chowdhury Stadium'
-    ],
-  ),
 ];

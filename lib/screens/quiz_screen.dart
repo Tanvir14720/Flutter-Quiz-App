@@ -32,7 +32,7 @@ class _QuizScreenState extends State<StatefulWidget> {
   }
 
   void startQuestionTimer() {
-    _questionTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+    _questionTimer = Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
         if (_remainingTimeInSeconds > 0) {
           _remainingTimeInSeconds--;
@@ -86,10 +86,10 @@ class _QuizScreenState extends State<StatefulWidget> {
     bool isLastQuestion = questionIndex == questions.length - 1;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Quiz App'),
+        title: const Text('Quiz App for Class'),
         actions: [
           Text('Time: $_remainingTimeInSeconds'),
-          const SizedBox(width: 16),
+          SizedBox(width: 16),
         ],
       ),
       body: Padding(
